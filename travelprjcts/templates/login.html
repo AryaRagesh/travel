@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body style="background-color:green">
+<h1 style="color:white;font-size:50px;margin-left:5%">Login Here</h1>
+
+<form method="post"  action="login" style="background-color:Lavender;width:900px;height:500px;margin-left:15%;border:15px solid white">
+ {% csrf_token %}
+    <br>
+    <center><img src="{% static 'images/download.png'%}"  style="width:90px;height:90px;"></center>
+
+<table align="center"  >
+    <tr><br>
+    <br></tr>
+
+    <tr><td>
+        <b></b><label style="font-size:20px;font-family:cursive;">User Name</label></b></td>
+        <td>   </td>
+        <td>   </td><td></td>
+        <td><input  type="text" name="name" placeholder="User Name"></td>
+        </tr>
+    <tr><td></td></tr>
+     <tr><td><label style="font-size:20px;font-family:cursive;">Password</label></td>
+         <td>  </td>
+         <td>   </td>
+         <td></td>
+     <td><input type="password" name="pwd" placeholder="must contain 8 letters "></td></tr><tr><td></td></tr>
+
+<tr><td><br><br></td></tr>
+
+    <tr><td></td>
+         <td> </td>
+         <td> <input type="submit" name="btn" style="font-size:30px;background-color:black;color:white;" ></td>
+         <td></td>
+
+     <td></td></tr>
+
+</table>
+
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+</form>
+</body>
+</html>

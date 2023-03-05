@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body style="background-color:green">
+<h1 style="color:white;font-size:50px;margin-left:5%">Sign Up</h1>
+
+<form method="post"  action="register" style="background-color:Lavender;width:900px;height:500px;margin-left:15%;border:15px solid white">
+ {% csrf_token %}
+    <br>
+    <center><label style="color:green;align:center;font-size:25px">Tell Us About You..</label></center>
+<table align="center"  >
+    <tr><br>
+    <br></tr>
+
+    <tr><td>
+        <b></b><label style="font-size:20px;font-family:cursive;">User Name</label></b></td>
+        <td>   </td>
+        <td>   </td><td></td>
+        <td><input  type="text" name="name" placeholder="User Name"></td>
+        </tr>
+    <tr><td></td></tr>
+     <tr><td><label style="font-size:20px;font-family:cursive;">First Name</label></td>
+    <td>   </td>
+        <td>   </td><td></td>
+        <td><input type="text" name="fname" placeholder=" Last Name"></td>
+ </tr><tr><td></td></tr>
+    <tr><td></td></tr>
+     <tr><td><label style="font-size:20px;font-family:cursive;">Last Name</label></td>
+    <td>   </td>
+        <td>   </td><td></td>
+        <td><input type="text" name="lname" placeholder=" Last Name"></td>
+ </tr><tr><td></td></tr>
+    <tr><td><label style="font-size:20px;font-family:cursive;" >Email Id</label></td>
+    <td>   </td>
+        <td>   </td><td></td>
+        <td><input type="email" name="email" placeholder="example@domain.com"></td>
+    </tr><tr><td></td></tr>
+
+
+     <tr><td><label style="font-size:20px;font-family:cursive;">Password</label></td>
+         <td>  </td>
+         <td>   </td>
+         <td></td>
+     <td><input type="password" name="pwd" placeholder="must contain 8 letters "></td></tr><tr><td></td></tr>
+     <tr><td><label style="font-size:20px;font-family:cursive;">Confirm Password</label></td>
+         <td> </td>
+         <td> </td>
+         <td></td>
+
+     <td><input type="password" name="cpwd" ></td></tr>
+<tr><td></td></tr>
+
+<tr><td><br><br></td></tr>
+
+    <tr><td></td>
+         <td> </td>
+         <td> <input type="submit" name="btn" style="font-size:30px;background-color:black;color:white;" ></td>
+         <td></td>
+
+     <td></td></tr>
+
+</table>
+
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+</form>
+</body>
+</html>
